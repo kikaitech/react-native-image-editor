@@ -272,7 +272,8 @@ public class ImageEditorModule extends ReactContextBaseJavaModule {
 
         String mimeType = outOptions.outMimeType;
         if (mimeType == null || mimeType.isEmpty()) {
-          throw new IOException("Could not determine MIME type");
+          mimeType = "image/jpeg";
+          // throw new IOException("Could not determine MIME type");
         }
 
         File tempFile = createTempFile(mContext, mimeType);
